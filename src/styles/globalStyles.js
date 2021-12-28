@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
-import breakpoint from './breakpoints'
-import theme from './theme'
+import { createGlobalStyle } from 'styled-components';
+import breakpoint from './breakpoints';
+import theme from './theme';
 
 const GlobalStyle = createGlobalStyle`
   // Root styling

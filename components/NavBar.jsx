@@ -1,6 +1,7 @@
-import styled from 'styled-components'
-import Link from 'next/link'
-import * as S from '../src/styles/styles'
+import styled from 'styled-components';
+import Link from 'next/link';
+import Image from 'next/image';
+import * as S from '../src/styles/styles';
 
 const Nav = styled.nav`
   width: 100%;
@@ -12,11 +13,6 @@ const Nav = styled.nav`
     margin: auto;
     display: flex;
     justify-content: space-between;
-
-    img {
-      max-width: 100px;
-      border-radius: 100%;
-    }
 
     ul {
       display: flex;
@@ -32,20 +28,20 @@ const Nav = styled.nav`
       }
     }
   }
-`
+`;
 
 export default function NavBar() {
   return (
     <Nav>
       <div className="inner">
-        <img src="https://via.placeholder.com/50" />
+        <Image src="https://via.placeholder.com/50" width="50" height="50" alt="logo" />
         <ul>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/archive">Blogs</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
+          <li><Link href="/"><a>Home</a></Link></li>
+          <li><Link href="/archive"><a>Blogs</a></Link></li>
+          <li><Link href="/contact"><a>Contact</a></Link></li>
           <S.PrimaryBtn>A button</S.PrimaryBtn>
         </ul>
       </div>
     </Nav>
-  )
+  );
 }
