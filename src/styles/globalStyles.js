@@ -11,9 +11,15 @@ const GlobalStyle = createGlobalStyle`
     --primary-btn: ${props => props.theme.colors.primaryBtn};
     --secondary-btn: ${props => props.theme.colors.secondaryBtn};
     --white: ${props => props.theme.colors.white};
-    --yellow: ${props => props.theme.colors.yellow};
-    --orange: ${props => props.theme.colors.orange};
-    --brown: ${props => props.theme.colors.brown};
+    --melon: ${props => props.theme.colors.melon};
+    --palePink: ${props => props.theme.colors.palePink};
+    --mistyRose: ${props => props.theme.colors.mistyRose};
+    --isabelline: ${props => props.theme.colors.isabelline};
+    --alabaster: ${props => props.theme.colors.alabaster};
+    --linen: ${props => props.theme.colors.linen};
+    --champPink: ${props => props.theme.colors.champPink};
+    --peach: ${props => props.theme.colors.peach};
+    --crayola: ${props => props.theme.colors.crayola};
   }
 
   // Document default fixes
@@ -22,7 +28,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: calc(${props => props.theme.fontSizes.base} + 0vw);
     font-family: ${props => props.theme.fontFamilies.text};
-    background: ${props => props.theme.colors.document}
+    background: ${props => props.theme.colors.document};
+    line-height: 140%;
   }
 
   // Typography sizing
@@ -47,6 +54,11 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     font-family: ${props => props.theme.fontFamilies.titles};
     color: ${props => props.theme.colors.titles};
+  }
+
+  p,a,span {
+    color: ${props => props.theme.colors.text};
+    text-decoration: none;
   }
 
   .container { 

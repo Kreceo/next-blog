@@ -5,14 +5,19 @@ import * as S from '../src/styles/styles';
 
 const Nav = styled.nav`
   width: 100%;
-  padding: 20px 0px 20px 0px;
-  box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.08),0px 20px 14px -18px rgba(0,0,0,0.08);
+  box-shadow: 0px 1px 10px 0px var(--melon);
+  margin-bottom: 40px;
 
-  .inner {
+  div {
     max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    padding: 10px 20px 10px 10px;
+
+    img {
+      border-radius: 100%;
+    }
 
     ul {
       display: flex;
@@ -24,6 +29,8 @@ const Nav = styled.nav`
 
         a {
           text-decoration: none;
+          color: var(--text-color);
+          font-size: 14px;
         }
       }
     }
@@ -33,7 +40,7 @@ const Nav = styled.nav`
 export default function NavBar() {
   return (
     <Nav>
-      <div className="inner">
+      <div>
         <Image src="https://via.placeholder.com/50" width="50" height="50" alt="logo" />
         <ul>
           <li><Link href="/"><a>Home</a></Link></li>

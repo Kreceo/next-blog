@@ -1,15 +1,23 @@
 export const theme = {
   colors: {
     // These are called within globalStyles.js in the :root, for using as variables
-    document: "#FFFDF9",
+    document: "#FFFFFF",
     titles: '#333333',
     text: '#000000',
     primaryBtn: '#445973',
     secondaryBtn: '86B7BA',
     white: '#FFFFFF',
-    yellow: '#EDDCBB',
-    orange: '#E0AF67',
-    brown: '#967040'
+    melon: '#FEC5BB',
+    palePink: '#FCD5CE',
+    mistyRose: '#FAE1DD',
+    isabelline: '#F8EDEB',
+    platinum: '#E8E8E4',
+    alabaster: '#D8E2DC',
+    linen: '#ECE4DB',
+    champPink: '#FFE5D9',
+    peach: '#FFD7BA',
+    crayola: '#FEC89A',
+    
   },
   fontFamilies: {
     // The google font links are declared in _document.js

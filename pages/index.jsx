@@ -1,9 +1,12 @@
 import Card from '../components/Card';
+import * as S from '../src/styles/styles';
 
 export default function Home() {
   return (
-    <div>
+    <S.FlexRowContainer>
       <Card />
-    </div>
+      <Card />
+      <Card />
+    </S.FlexRowContainer>
   );
 }
