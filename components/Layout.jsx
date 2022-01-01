@@ -15,12 +15,10 @@ export default function Layout({children}) {
         */}
         <GlobalStyle />
         <NavBar />
-      
         {/* This is set within the theme.js file */}
         <div className="container">
           {children}
         </div>
-
         <Footer />
       </ThemeProvider>
     </>
