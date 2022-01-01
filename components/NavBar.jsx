@@ -43,9 +43,9 @@ export default function NavBar() {
       <div>
         <Image src="https://via.placeholder.com/50" width="50" height="50" alt="logo" />
         <ul>
-          <li><Link href="/"><a>Home</a></Link></li>
-          <li><Link href="/archive"><a>Blogs</a></Link></li>
-          <li><Link href="/contact"><a>Contact</a></Link></li>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/archive">Blogs</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
           <S.PrimaryBtn>A button</S.PrimaryBtn>
         </ul>
       </div>
