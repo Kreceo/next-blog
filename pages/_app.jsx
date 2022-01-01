@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import Layout from '../components/Layout';
 
 export default function MyApp({ Component, pageProps }) {
