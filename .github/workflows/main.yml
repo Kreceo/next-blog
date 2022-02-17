@@ -1,0 +1,39 @@
+name: Run Cypress Tests
+
+on:
+  # Allow manual running via Github Action Web UI
+  workflow_dispatch:
+
+  # Run tests when pushing from the origin branch
+  # Remove once tests finalised and merged
+  push:
+    branches:
+      - cicd-tests
+  
+  # Run tests when opening a PR targeting main
+  pull_request:
+    types: [opened, reopened]
+    branches:
+      - main
+
+jobs:
+  Cypress:
+    name: Run Cypress Tests
+    runs-on: ubuntu-latest
+
+    steps:
+        # Basically does a git pull of the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+        # Custom action made by Cypress which bundles
+        # All dependencies needed to run it
+      - name: Run Cypress
+        uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
+          # Comma seperated list of env vars for the action
+          env: stag_host=https://staging.global-franchise.com,prod_host=https://www.global-franchise.com,pass=${{ secrets.TEST_USER_PASS }},franchise=${{ secrets.TEST_FRANCHISE }}
+          record: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_KEY }}
